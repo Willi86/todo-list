@@ -1,0 +1,200 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('/street.jpeg') no-repeat center center fixed; /* Background image */
+    background-size: cover; /* Make the background cover the entire screen */
+    color: #333; /* Text color */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* Header Styles */
+header {
+    background: linear-gradient(35deg, #3498db 50%, #63d392 50%);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+header h1 {
+    margin: 2rem;
+    font-size: 46px;
+}
+
+header input[type="text"] {
+    padding: 1rem;
+    width: 25rem;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin: 1rem;
+}
+
+header button {
+    background-color: #3498db; /* Green background */
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+header button:hover {
+    background-color: #0c417c; /* Darker green on hover */
+}
+
+#span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* To-Do List Styles */
+#List {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 0;
+}
+
+#List li {
+    background: linear-gradient(35deg, #3498db 50%, #63d392 50%);
+    border: 0.3rem solid #ffffff;
+    border-radius: 5px;
+    padding: 1.3rem;
+    margin-bottom: 1rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1rem 0.6rem 0.5rem rgba(0, 0, 0, 0.534); /* Subtle shadow */
+    position: relative;
+    animation: fadeIn 0.4s ease-in; /* Animation for new items */
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5em;
+    color:white;
+}
+
+/* Delete Button Styling */
+.deleteTask {
+    background-color: #dc3545; /* Initial red color */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    margin-left: 20px;
+}
+
+/* Hover Effect: Shake and Change Color */
+.deleteTask:hover {
+    background-color: #c82333; /* Darker red on hover */
+    animation: shake 0.3s ease-in-out; /* Apply shake animation */
+}
+
+/* Shake Animation */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    50% { transform: translateX(4px); }
+    75% { transform: translateX(-4px); }
+    100% { transform: translateX(0); }
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #343a40; /* Dark footer background */
+    color: #ccc;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px;
+}
+
+.footer-links li {
+    display: inline-block;
+}
+
+.footer-links a {
+    color: #ffc107; 
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffeb3b; 
+}
+
+footer p {
+    font-size: 14px;
+    margin: 10px 0 0;
+}
+
+/* Styles for completed tasks */
+.completed {
+    text-decoration: line-through; 
+}
+li.completed
+ {
+    color: #64393d !important; /* Apply to all children */
+    background-color: #c0c0c0 
+
+}
+li.completed:hover{
+cursor: pointer;
+
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    header input[type="text"] {
+        width: 70%;
+        margin: 10px 0;
+    }
+
+    header button {
+        width: 100%;
+    }
+
+    #List {
+        max-width: 90%;
+    }
+
+    .footer-container {
+        padding: 0 20px;
+    }
+}
