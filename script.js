@@ -89,3 +89,12 @@ function loadTasks() {
     });
   }
 }
+
+function deleteStorage(){
+
+
+window.localStorage.removeItem("tasks");
+location.reload();
+
+
+}

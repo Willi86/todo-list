@@ -97,15 +97,6 @@ header button:hover {
     animation: shake 0.3s ease-in-out; 
 }
 
-/* Shake Animation */
-@keyframes shake {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(-4px); }
-    50% { transform: translateX(4px); }
-    75% { transform: translateX(-4px); }
-    100% { transform: translateX(0); }
-}
-
 
 /* Footer Styles */
 footer {
@@ -161,9 +152,34 @@ li.completed:hover{
 cursor: pointer;
 
 }
+.button-container {
+    display: flex;              
+    justify-content: center;     /* Center horizontally */
+    align-items: center;         /* Center vertically */
+}
 
 
-/* Animations */
+#deleteLocalBtn {
+    background-color: #a82828; 
+    color: white;  
+    width: 20vh;           
+    padding: 1em 2em;       
+    text-align: center;        
+    text-decoration: none; 
+    font-size: 1em;          
+    margin: 20em ;          
+    cursor: pointer;           
+    border: none;             
+    border-radius: 4px;       
+    transition: background-color 0.3s;
+}
+
+#deleteLocalBtn:hover {
+    background-color: #771010; 
+}
+
+
+/* Animations definition */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -174,6 +190,17 @@ cursor: pointer;
         transform: translateY(0);
     }
 }
+
+
+/* Shake Animation */
+@keyframes shake { /*defined the animation*/
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    50% { transform: translateX(4px); }
+    75% { transform: translateX(-4px); }
+    100% { transform: translateX(0); }
+}
+
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
